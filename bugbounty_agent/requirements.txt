@@ -1,0 +1,17 @@
+# Core CLI (tutor, recon, report, ask) uses only the standard library.
+# Install extras below only for the ingestion formats you actually want:
+
+pypdf                  # --file *.pdf
+python-docx             # --file *.docx
+ebooklib                # --file *.epub
+beautifulsoup4          # --file *.epub, --url
+requests                 # --url
+youtube-transcript-api   # --youtube
+
+# Recon features shell out to these external tools if installed on your PATH:
+#   subfinder  https://github.com/projectdiscovery/subfinder
+#   httpx      https://github.com/projectdiscovery/httpx
+#   nuclei     https://github.com/projectdiscovery/nuclei   (optional, off by default)
+python-telegram-bot      # for telegram_bot.py chat interface
+flask                    # for pa_webhook_bot.py (PythonAnywhere deployment)
+flask                    # for telegram_bot.py health-check endpoint (Render+UptimeRobot)
